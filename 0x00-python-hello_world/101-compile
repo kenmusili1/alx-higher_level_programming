@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Check if the PYFILE environment variable is set
+if [ -z "$PYFILE" ]; then
+  echo "PYFILE environment variable is not set. Please set it to the Python script's filename."
+  exit 1
+fi
+
+# Check if the specified Python script exists
+if [ ! -f "$PYFILE" ]; then
+  echo "Python script '$PYFILE' not found in the current directory."
+  exit 1
+fi
+
+# Compile the Python script and save the output with the name $PYFILEc
+python3 -m py_compile "$PYFILE"
+exit_code=$?
+
+if [ $exit_code -eq 0 ]; then
+  echo "Compiling $PYFILE ..."
+else
+  echo "Compilation failed for $PYFILE."
+fi
