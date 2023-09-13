@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 from sys import argv
 def fx():
     if len(argv) == 1:
