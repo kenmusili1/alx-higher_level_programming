@@ -6,9 +6,18 @@ Square Class that defines a square
 class Square:
 
     def __init__(self, size=0):
-        """Initialize a new Square.
-        Args:
-            size (int): The size of the new square.
+        """__init__
+
+        The __init__ method initializes the size value of the square.
+
+        Attributes:
+            size (:obj:`int`, optional): The size of the square.
+
+        Raises:
+            TypeError: If `size` type is not `int`.
+
+            ValueError: If `size` is less than `0`.
+
         """
 
         if type(size) is not int:
