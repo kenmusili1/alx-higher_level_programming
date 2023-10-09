@@ -2,6 +2,7 @@
 
 """Defines an inherited list class MyList."""
 
+
 class MyList(list):
     """Custom list class that prints the list in sorted order."""
 
